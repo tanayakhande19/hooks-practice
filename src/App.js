@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
 
-function App() {
+function Home() {
+ // handling check boxes
+const [mobile, setMobile] = useState(false);
+const [laptop, setLaptop] = useState(false);
+const [smartwatch, setSmartWatch] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+    <form>
+    {mobile ? 'Mobile is checked' : 'Mobile is not checked'} 
+
+    {laptop ? 'Laptop is checked' : 'Laptop is not checked'}
+
+    {smartwatch ? 'Mobile is checked' : 'Mobile is not checked'}
+    <input 
+    type="checkbox"
+    value="mobile"
+    checked={mobile}
+    onChange={(e)=>{
+        setMobile(e.target.checked);
+    }}
+     /> Mobile <br/>
+
+    <input
+    type="checkbox" 
+    value="laptop"
+    checked={laptop}
+    onChange={(e)=>{
+        setLaptop(e.target.checked);
+    }}
+     /> Laptop <br/>
+
+    <input 
+    type="checkbox" 
+    value="smartwatch"
+    checked={smartwatch}
+    onChange={(e)=>{
+        setSmartWatch(e.target.checked);
+    }}
+    /> Smartwatch <br/>
+
+    </form>
     </div>
+    </>
   );
 }
 
-export default App;
+export default Home;
