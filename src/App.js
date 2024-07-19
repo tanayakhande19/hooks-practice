@@ -10,7 +10,7 @@ const [smartwatch, setSmartWatch] = useState(false);
     <div>
     <form>
     {mobile ? 'Mobile is checked' : 'Mobile is not checked'} 
-
+    
     {laptop ? 'Laptop is checked' : 'Laptop is not checked'}
 
     {smartwatch ? 'Mobile is checked' : 'Mobile is not checked'}
